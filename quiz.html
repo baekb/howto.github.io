@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>home</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+
+.body {
+  font-family:'THE명품고딕M', 'Arial Narrow', 'Fixedsys';
+  
+}
+
+.main{
+width:1800px;
+margin : 0 auto;
+margin-top:60px;
+text-align:center;
+
+}
+.box{
+text-align:center;
+margin-left:100px;
+}
+
+.title{
+  font-family:'THE명품고딕B', 'Arial Narrow', 'Fixedsys';
+font-size:64px;
+font-weight:500;
+margin-top:100px;
+margin-bottom:100px;
+}
+.prices{
+display: flex;
+text-align:center;
+}
+.price-item{
+width:300px;
+height:350px;
+border:1px solid black;
+margin:20px;        
+border-radius:4px;
+
+
+}
+.price-item-title{
+font-size:1.5rem;
+
+background : rgba(0,0,0,.03);
+height:53px;
+line-height:53px;
+border-bottom:1px solid black;
+
+}
+
+.price-item-button{
+padding : .5rem 1rem;
+font-size : 1.25rem;
+line-height:1.5;
+border-radius:.3rem;
+margin-top:30px;
+color:#007bff;
+background-color:transparent;
+background-image:none;
+border-color:#007bff;
+
+}
+
+.price-item-button--active{
+background-color:#007bff;
+color:white;
+}
+</style>
+
+<style type="text/css">
+
+
+#left{
+width:300px;
+height:800px;
+background-color:green;
+float:left;
+
+
+}
+
+#center{
+width:800px;
+height:560px;
+float:left;
+padding:100px;
+
+}
+#right{
+width:300px;
+height:800px;
+background-color:green;
+float:left;
+
+
+
+}
+
+#center{
+  font-family:'THE명품고딕M', 'Arial Narrow', 'Fixedsys';
+  font-size:24px;
+  font-weight:800;
+  text-align:left;
+  margin-bottom:10px;
+}
+
+.questionName{
+  font-size:36px;
+  font-weight:bold;
+}
+
+
+
+</style>
+
+
+
+</head>
+<body>
+
+<script language="javascript">
+    var delay=10; //시간설정
+    var correctAnswers=new Array("C","B","C");  //정답
+    
+    var questionNum=1;
+    var timer;
+    var layer;
+    var clock=delay;
+    var score=0;
+    
+    function questionShow(){
+      if (layer=eval("document.all.question"+questionNum)){
+        layer.style.display="inline";
+        document.all.timeLeft.innerHTML=clock;
+        questionHide();
+      } else {
+        document.all.timeLeft.innerHTML=0;
+        document.all.quizScore.innerHTML=" SCORE >> "+(score) +" /"+(questionNum-1)
+        document.all.quizScore.style.display="inline";
+      }
+    }
+    
+    function questionHide(){
+      if (clock>0) {
+        document.all.timeLeft.innerHTML=clock;
+        clock--;
+        timer=setTimeout("questionHide()",1000);
+      } else {
+        clearTimeout(timer);
+        document.all.answerBoard.innerHTML=" ";
+        clock=delay;
+        layer.style.display="none";
+        questionNum++;
+        questionShow();
+      }
+    }
+    
+    function check_answer(answer){
+      if (correctAnswers[questionNum-1]==answer){
+        score++;
+        document.all.answerBoard.innerHTML="CORRECT";
+      } else {
+        document.all.answerBoard.innerHTML="WRONG";
+      }
+      clock=0;
+      clearTimeout(timer);
+      timer=setTimeout("questionHide()",700);
+    }
+    
+    window.onload=questionShow;
+    </script>
+  
+<div class="nav">
+
+<a class="title-href" href="index.html">
+<div class="logo-text">
+<img class="logo" src="img/logo.png" >
+<div class="nav-title">
+HOW TO ;
+</div>
+</div>
+</a>
+
+
+<div class="nav-right-items">
+<a class="menu-href" href="download.html"><div class="nav-item">DOWNLOAD</div></a>
+<a class="menu-href" href="animate.html"><div class="nav-item">ANIMATE</div></a>
+<a class="menu-href" href="quiz.html"><div class="nav-item">QUIZ</div></a>
+
+</div>
+</div>
+
+<div class="main">
+
+<div class="title">
+Quiz
+</div>
+<div class="box">
+<div id="left">
+      <iframe src="fla/left-part.html" name="left" frameborder="0"
+      scrolling="no" width="300" height="800" ></iframe>
+<div class="category-detail">
+
+</div>
+</div>
+
+<div id="center" name="content" style="border-top:20px solid
+ #c0eaff;border-bottom:20px solid #e8f6f7;">
+
+TIMER : <B><span id="timeLeft"></span></B> s<br>
+<br>
+<div id="answerBoard"> </div>
+<br>
+
+<div id="question1" style="display:none">
+<h3 class="questionName">Which tool do you use to select parts of objeccts?</h3>
+<input type="radio" class="answerList" onclick="check_answer('A')"> Transformation</a><br>
+<input type="radio"class="answerList" onclick="check_answer('B')"> Shape</a><br>
+<input type="radio" class="answerList"onclick="check_answer('C')"> Select</a><br>
+<input type="radio" class="answerList"onclick="check_answer('D')"> Symbol</a><br>
+        
+</div>
+
+<div id="question2" style="display:none">
+<h3 class="questionName">What is wrong with the Animate Tweeen effect?</h3>
+<input type="radio"class="answerList" onclick="check_answer('A')"> Classic Tween</a><br>
+<input type="radio" class="answerList"="check_answer('B')"> Frame Tween</a><br>
+<input type="radio"class="answerList" onclick="check_answer('C')"> Motion Tween</a><br>
+<input type="radio" class="answerList"onclick="check_answer('D')"> Shape Tween</a><br>
+</div>
+
+<div id="question3" style="display:none">
+    <h3 class="questionName">What tween can make tween effect without keyframe?</h3>
+    <input type="radio" class="answerList"onclick="check_answer('A')">Classic Tween<br>
+    <input type="radio"class="answerList" onclick="check_answer('A')">Shape Tween<br>
+    <input type="radio"class="answerList" onclick="check_answer('A')">Motion Tween<br>
+
+</div>
+
+<div id="quizScore" style="display:none">
+</div>
+
+</div>
+</div>
+
+<div id="right">
+    <iframe src="fla/right-part.html" name="left" frameborder="0"
+    scrolling="no" width="300" height="800" ></iframe>
+<div class="category-detail">
+
+</div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

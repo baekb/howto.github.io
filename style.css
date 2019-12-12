@@ -1,0 +1,145 @@
+
+@charset "utf-8";
+
+a:link{color:black;text-decoration:none;}
+a:visited{color:black;text-decoration:none;}
+a:hover{color:skyblue;text-decoration:none}
+
+.body {
+  font-family:'THE명품고딕M', 'Arial Narrow', 'Fixedsys';
+  
+}
+
+
+.nav{
+  height:70px;
+  border-bottom:2px solid skyblue;
+  display:flex;
+  align-items:center;
+  margin-left:50px;
+  margin-right:50px;
+  color:blue;
+}
+
+
+.nav-right-items{
+  
+  display:flex;
+  margin-left : auto;
+  margin-right:50px;
+}
+.nav-item{
+  margin-left:10px;
+}
+.logo-text{
+  display:flex;
+}
+.nav-title{
+  font-size:24px;
+  font-weight:bold;
+  margin-top:10px;
+  margin-left:10px;
+}
+.main{
+  width:800px;
+  margin:0px auto;
+  margin-top:60px;
+}
+.main-img{
+  text-align:center;
+}
+
+.prices{
+  display: flex;
+  text-align:center;
+}
+.price-item{
+  width:300px;
+  height:300px;
+  border:1px solid black;
+  border-radius:4px; 
+  margin : 20px;
+  
+
+}
+.price-item-title{
+  font-size:1.5rem;
+  
+  background : rgba(0,0,0,.03);
+  height:53px;
+  line-height:53px;
+  border-bottom:1px solid black;
+
+}
+.price-img{
+  width:150px;
+  height:150px;
+  padding-top:10px;
+
+}
+
+.price-item-button{
+  padding : .5rem 1rem;
+  font-size : 1.25rem;
+  line-height:1.5;
+  border-radius:.3rem;
+  margin-top:30px;
+  color:#007bff;
+  background-color:transparent;
+  background-image:none;
+  border-color:#007bff;
+
+}
+
+.price-item-button--active{
+  background-color:#007bff;
+  color:white;
+}
+
+
+.logo-text{
+  display:flex;
+}
+.nav-title{
+  font-size:24px;
+  font-weight:bold;
+  margin-top:10px;
+  margin-left:10px;
+}
+.main{
+  width:1000px;
+  text-align :center;
+  margin : 0px auto;
+  margin-top:100px;
+}
+.main-title{
+  font-size:64px;
+  font-weight:bold;
+  margin-bottom:20px;
+  
+}
+.subtitle{
+    font-size:32px;
+    font-weight:300;
+    margin-bottom:10px;
+}
+.download{
+    cursor:pointer;
+    padding:.5rem 1rem;
+    font-size : 18px;
+    line-height:1.5;
+    border-radius:4px;
+    margin-top:30px;
+    color:skyblue;
+    background-color:transparent;
+    background-image:none;
+    border-color:skyblue;
+}
+
+ .download:hover{
+        color:red;
+        border-color:red;
+
+      }
+
+

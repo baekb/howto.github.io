@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>animate</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+
+
+
+</script>
+<style>
+
+body {
+  font-family:'THE명품고딕M', 'Arial Narrow', 'Fixedsys';
+  
+}
+.nav{
+  height:70px;
+  border-bottom:2px solid skyblue;
+  display:flex;
+  align-items:center;
+  margin-left:50px;
+  margin-right:50px;
+}
+.nav-right-items{
+  
+  display:flex;
+  margin-left : auto;
+  margin-right:50px;
+}
+.nav-item{
+  margin-left:10px;
+}
+.logo-text{
+  display:flex;
+}
+.nav-title{
+  font-size:24px;
+  font-weight:bold;
+  margin-top:10px;
+  margin-left:10px;
+}
+.main{
+  width:1800px;
+  margin : 0px auto;
+  margin-top:0px;
+  margin-left:150px;
+  margin-right:150px;
+}
+
+.category-main{
+  font-weight:300;
+  text-align : left;
+  list-style:square;
+  padding-left:5px;
+  margin : 0px;
+  margin-bottom:10px;
+  
+}
+.category-sub{
+  font-weight:200;
+  text-align : left;
+  margin-bottom:20px;
+  
+}
+
+
+.category-sub{
+  list-style:none;
+  padding-bottom:10px;
+  padding-left:10px;
+  border-bottom:2px solid lightskyblue;
+  
+}
+.category-sub > li{
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+
+
+</style>
+
+<style type="text/css">
+
+
+#category{
+  width:300px;
+  height:700px;
+  font-size:22px;
+  background-color:white;
+  float:left;
+  border-right:2px solid skyblue;
+  margin-top:0px;
+  
+}
+
+
+#contents{
+  width:1300px;
+  height:700px;
+  background-color:white;
+  float:left;
+  border:0;
+  border-left:skyblue;
+}
+
+
+a:link{color:black;text-decoration:none;}
+a:visited{color:black;text-decoration:none;}
+a:hover{color:skyblue;text-decoration:none}
+
+
+</style>
+
+</head>
+<body>
+
+<div class="nav">
+
+    <a class="title-href" href="index.html">
+      <div class="logo-text">
+        <img class="logo" src="img/logo.png" >
+        <div class="nav-title">
+            HOW TO ;
+        </div>
+      </div>
+        </a>
+
+
+<div class="nav-right-items">
+    <a class="menu-href" href="download.html"><div class="nav-item">DOWNLOAD</div></a>
+    <a class="menu-href" href="animate.html"><div class="nav-item">ANIMATE</div></a>
+    <a class="menu-href" href="quiz.html"><div class="nav-item">QUIZ</div></a>
+  
+</div>
+</div>
+
+<div class="main">
+
+<div id="category">
+<div class="category-detail">
+<ul>
+  <li class="category-main">BASIC</li>
+  <ul class="category-sub">
+    <li><a href="basicTool.html" target="content">Tool</a></li>
+    <li><a href="basicTimeline.html" target="content">Timeline</a></li>
+  </ul>
+
+  <li class="category-main">TWEEN</li>
+  <ul class="category-sub">
+      <li><a href="tweenMotion.html" target="content">Motion</a></li>
+      <li><a href="tweenShape.html" target="content">Shape</a></li>
+      <li><a href="tweenClassic.html" target="content">Classic</a></li>
+  </ul>
+    <li class="category-main"><a href="publish.html" target="content">PUBLISH</a></li>
+</ul>
+</div>
+</div>
+<div id="contents" name="right">
+<iframe name="content" frameborder="0"
+scrolling="no" width="1300" height="3000" ></iframe>
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

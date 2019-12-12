@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CreateJS export from bluebird</title>
+
+
+<script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
+<script src="http://code.createjs.com/tweenjs-0.3.0.min.js"></script>
+<script src="http://code.createjs.com/movieclip-0.5.0.min.js"></script>
+<script src="http://code.createjs.com/preloadjs-0.2.0.min.js"></script>
+<script src="bluebird.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+var bird;
+function init() {
+	canvas = document.getElementById("demoCanvas");
+	exportRoot = new lib.bluebird();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+
+
+	createjs.Ticker.setFPS(24);
+	createjs.Ticker.addEventListener("tick", handleTick);
+
+	bird= new lib.blueBird();
+	bird.x=canvas.width/2;
+	bird.y=canvas.height/2;
+
+	stage.addChild(bird);
+	
+	
+	stage.update();
+}
+function handleTick(){
+	bird.x=bird.x+6;
+	if(bird.x>stage.canvas.width){
+		bird.x=0;
+	}
+	stage.update();
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4">
+	<canvas id="demoCanvas" width="1000" height="400" style="background-color:#ffffff"></canvas>
+</body>
+</html>
